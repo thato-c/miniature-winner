@@ -1,14 +1,17 @@
 import java.util.Scanner;
 
-public class BookDashboard {
+public class BookDashboard implements Dashboard{
     private BookShop bookShop;
     private Scanner scan;
+    private App app;
 
-    public BookDashboard(BookShop bookShop){
+    public BookDashboard(BookShop bookShop, App app){
         this.bookShop = bookShop;
         this.scan = new Scanner(System.in);
+        this.app = app;
     }
 
+    @Override
     public void showDashBoard(){
         String option;
         do{
@@ -37,6 +40,11 @@ public class BookDashboard {
         } while (!option.equals("0"));
     }
 
+    @Override
+    public void returnToMainMenu(){
+        app.run();
+    }
+
     private void viewAllBooks(){
         System.out.println("All Books:");
         bookShop.getAllBooks();
@@ -60,8 +68,4 @@ public class BookDashboard {
         System.out.println("Book added successfully");
     }
 
-    private void returnToMainMenu(){
-        App app = new App();
-        app.run();
-    }
 }

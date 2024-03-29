@@ -1,14 +1,17 @@
 import java.util.Scanner;
 
-public class CustomerDashboard {
+public class CustomerDashboard implements Dashboard {
     private BookShop bookShop;
     private Scanner scan;
+    private App app;
 
-    public CustomerDashboard(BookShop bookShop){
+    public CustomerDashboard(BookShop bookShop, App app){
         this.bookShop = bookShop;
         this.scan = new Scanner(System.in);
+        this.app = app;
     }
 
+    @Override
     public void showDashBoard(){
         String option;
         do{
@@ -34,6 +37,11 @@ public class CustomerDashboard {
 
             }
         } while (!option.equals("0"));
+    }
+
+    @Override
+    public void returnToMainMenu(){
+        app.run();
     }
 
     public void viewAllCustomers(){
