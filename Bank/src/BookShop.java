@@ -4,9 +4,11 @@ import java.util.List;
 
 public class BookShop {
     private List<Customer> customers;
+    private List<Book> books;
 
     public BookShop(){
         this.customers = new ArrayList<>();
+        this.books = new ArrayList<>();
     }
 
     public void addCustomer(Customer customer){
@@ -19,7 +21,18 @@ public class BookShop {
 
     public void getAllCustomers(){
         for (Customer customer : customers){
-            System.out.println(customer.toString()+"\n");
+            System.out.println(customer.toString());
         }
     }
+    
+    public void addBook(Book book){
+        books.add(book);
+    }
+
+    public void getAllBooks(){
+        for(Book book : books){
+            System.out.println(book.toString());
+        }
+    }
+
 }
