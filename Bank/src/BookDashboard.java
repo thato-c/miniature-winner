@@ -28,6 +28,7 @@ public class BookDashboard {
                     break;
                 case "0":
                     System.out.println("Returning to Main Menu...");
+                    returnToMainMenu();
                     break;
                 default:
                     System.out.println("Invalid option. Please try again.");
@@ -57,5 +58,10 @@ public class BookDashboard {
         Book newBook = new Book(title, isbn, price);
         bookShop.addBook(newBook);
         System.out.println("Book added successfully");
+    }
+
+    private void returnToMainMenu(){
+        App app = new App();
+        app.run();
     }
 }
