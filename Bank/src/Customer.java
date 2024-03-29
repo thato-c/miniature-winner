@@ -1,12 +1,12 @@
 public class Customer {
     private String name;
     private String address;
-    private String contactInfo;
+    private String email;
 
-    public Customer(String name, String address, String contactInfo){
+    public Customer(String name, String address, String email){
         this.name = name;
         this.address = address;
-        this.contactInfo = contactInfo;
+        this.email = email;
     }
 
     public String getName(){
@@ -17,8 +17,8 @@ public class Customer {
         return address;
     }
 
-    public String getContactInfo(){
-        return contactInfo;
+    public String getEmail(){
+        return email;
     }
 
     public void setName(String name){
@@ -29,14 +29,14 @@ public class Customer {
         this.address = address;
     }
 
-    public void setContactInfo(String contactInfo){
-        this.contactInfo = contactInfo;
+    public void setContactInfo(String email){
+        this.email = email;
     }
 
     @Override
     public String toString(){
         return "Customer{name = " + name + 
                 ", address = " + address + 
-                ",  contactInfo = " + contactInfo +"}";
+                ",  contactInfo = " + email +"}";
     }
 }

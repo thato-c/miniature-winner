@@ -22,9 +22,11 @@ public class App {
                     bookShop.getAllCustomers();
                 }
                 else if(option.equals("2")){
+                    System.out.println("");
                     System.out.println("2. Add Customer");
                 } 
                 else{
+                    System.out.println("");
                     System.out.println("Invalid option. Please enter a valid option (1 or 2).");
                 }
 
